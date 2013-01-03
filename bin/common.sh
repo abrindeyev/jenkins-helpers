@@ -7,7 +7,7 @@ set +x # Disabling verbose output in Jenkins
 : ${BASH_SOURCE[0]:?"Hell, no! This is library is MUST be sourced in 1st line of Jenkins job!"}
 
 # Including current dir to PATH
-export PATH="$PATH:${BASH_SOURCE[0]}"
+export PATH="$PATH:$(dirname ${BASH_SOURCE[0]})"
 
 export HttpUser="root"
 export HttpPassword=$(get_api_token.rb $HttpUser)
