@@ -11,7 +11,7 @@ export PATH="$PATH:$(dirname ${BASH_SOURCE[0]})"
 
 export HttpUser="root"
 export HttpPassword=$(get_api_token.rb $HttpUser)
-export PoolAPI="http://webapp-un.c4d.griddynamics.net"
+export PoolAPI="http://webapp-qa.c4d.griddynamics.net"
 
 export curl="/usr/bin/curl -s"
 export jcurl="$curl --basic -u $HttpUser:$HttpPassword"
